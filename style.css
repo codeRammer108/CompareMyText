@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 300px;
+    height: 200px;
+}
+
+.editable {
+    flex: 1;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    background-color: white;
+}
+
+.editable:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+[contenteditable]:empty:before {
+    content: attr(placeholder);
+    color: #999;
+    font-style: italic;
+}
+
+.similar {
+    background-color: #ccffcc; /* Green for similarities */
+}
+
+.different {
+    background-color: #ffcccc; /* Red for differences */
+}
